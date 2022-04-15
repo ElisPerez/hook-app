@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Message } from "./Message";
+
 import "./effects.css";
 
 export const SimpleForm = () => {
@@ -10,15 +12,15 @@ export const SimpleForm = () => {
   const { name, lastname } = formState;
 
   useEffect(() => {
-    console.log("Un primer Efecto sin dependencia");
+    // console.log("Un primer Efecto sin dependencia");
   }, []);
   
   useEffect(() => {
-    console.log("Segundo Efecto que se lanza con el primer efecto y se vuelve a lanzar cuando formState cambia");
+    // console.log("Segundo Efecto que se lanza con el primer efecto y se vuelve a lanzar cuando formState cambia");
   }, [ formState ]);
  
   useEffect(() => {
-    console.log("tercer Efecto que se lanza con el primer efecto y se vuelve a lanzar cuando lastname cambia (más específico)");
+    // console.log("tercer Efecto que se lanza con el primer efecto y se vuelve a lanzar cuando lastname cambia (más específico)");
   }, [lastname]);
  
   const handleInputChange = ({ target }) => {
@@ -56,6 +58,8 @@ export const SimpleForm = () => {
           value={lastname}
         />
       </div>
+
+      { (name === '123') && <Message /> }
     </>
   );
 };
