@@ -7,5 +7,5 @@ Aprendiendo los hooks de React
 React JS, Web
 
 ### Hooks:
-useState
-useEffect (Introduction)
+1. useState
+2. useEffect (Introduction)
