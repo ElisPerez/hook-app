@@ -2,7 +2,7 @@
 
 Aprendiendo los hooks de React
 
-## Elis Pérez
+## Elis Antonio Pérez
 
 React JS, Web
 
@@ -10,3 +10,4 @@ React JS, Web
 1. useState
 2. useEffect (Introduction)
 3. useEffect unmount - Cleanup
+4. useEffect PRECAUCIONES
