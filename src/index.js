@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
+import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks';
+// import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
 // import { Entendiendo } from './Entendiendo';
 // import { SimpleForm } from './components/02-useEffect/SimpleForm';
 // import { CounterWithCustomHook } from './components/01-useState/CounterWithCustomHook';
@@ -11,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <FormWithCustomHook />
+    <MultipleCustomHooks />
   </>
 );
 
