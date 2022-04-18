@@ -1,6 +1,6 @@
 # Hook App
 
-Aprendiendo los hooks de React
+Learning React Hooks
 
 ## Elis Antonio Pérez
 
@@ -15,4 +15,4 @@ React JS, Web
 6. Multiple Custom Hooks:
    - useFetch
    - API Breakingbad Quote: useFetch + useCounter.
-7. useRef: Primer uso
+7. useRef: First use
