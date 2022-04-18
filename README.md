@@ -8,8 +8,8 @@ React JS, Web
 
 ### Hooks:
 
-1. useState.
-2. useEffect (Introduction).
+1. useState(inicialState).
+2. useEffect(function, dependence).
    - useEffect unmount - Cleanup.
    - useEffect CAUTIONS.
 3. useState: Form with custom hook and useEffect.
@@ -21,5 +21,5 @@ React JS, Web
 6. useLayoutEffect.
 7. Memo: React method.
    - useMemo(function, dependence): Memo Hook.
-8. useCallback.
+8. useCallback(function, dependence).
 9. Final section: Practical exercise
