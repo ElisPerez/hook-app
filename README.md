@@ -20,3 +20,4 @@ React JS, Web
    - useRef, real use case.
 6. useLayoutEffect.
 7. Memo: React method.
+   - useMemo(function, dependence): Memo Hook.
