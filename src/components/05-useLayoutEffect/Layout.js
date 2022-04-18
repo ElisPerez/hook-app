@@ -15,8 +15,18 @@ export const Layout = () => {
 
   useLayoutEffect(() => {
     setBoxSize(pTag.current.getBoundingClientRect());
-  }, [quote]);
-
+  }, [ quote ]);
+ 
+ // Funcion reemplazar para el segundo parámetro el método JSON.stringify (opcional)
+ // function replace(key, value) {
+ //  if (typeof value === 'string') {
+ //   return 'Elis cambió el valor de esta key por este texto con la funcion replace';
+ //  } else {
+ //   return value;
+ //  }
+ // }
+ // console.log(replace('nombre', 'Elis Antonio'));
+// el tercer parámetro del método JSON.stringify es el número de tabulacion que deseo entre cada resultado.
   return (
     <>
       <h1>Layout - useLayoutEffect</h1>
@@ -25,8 +35,8 @@ export const Layout = () => {
       <blockquote className="blockquote text-end">
         <p ref={pTag}>{quote}</p>
       </blockquote>
-
-      <pre>{JSON.stringify(boxSize, null, 3)}</pre>
+      {/* en vez de usar una funcion replace para el segundo parametro se puede usar un arreglo indicando solamente las keys que se desean mostrar en los resultados */}
+      <pre>{JSON.stringify(boxSize, ['width', 'right'], 3)}</pre>
 
       <button onClick={increment} className="btn btn-primary">
         Next quote
