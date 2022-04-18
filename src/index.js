@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks';
+import { FocusScreen } from './components/04-useRef/FocusScreen';
+// import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks';
 // import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
 // import { Entendiendo } from './Entendiendo';
 // import { SimpleForm } from './components/02-useEffect/SimpleForm';
@@ -12,7 +13,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <MultipleCustomHooks />
+    <FocusScreen />
   </>
 );
 
