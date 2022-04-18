@@ -7,13 +7,15 @@ Learning React Hooks
 React JS, Web
 
 ### Hooks:
+
 1. useState
 2. useEffect (Introduction)
-3. useEffect unmount - Cleanup
-4. useEffect CAUTIONS
-5. useState: Form with custom hook and useEffect.
-6. Multiple Custom Hooks:
+   - useEffect unmount - Cleanup
+   - useEffect CAUTIONS
+3. useState: Form with custom hook and useEffect.
+4. Multiple Custom Hooks:
    - useFetch
    - API Breakingbad Quote: useFetch + useCounter.
-7. useRef: First use
-   7.1. useRef, real use case.
+5. useRef: First use.
+   - useRef, real use case.
+6. useLayoutEffect
