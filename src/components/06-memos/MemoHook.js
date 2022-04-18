@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useCounter } from '../../hooks/useCounter';
-import { procesoPesado } from '../helpers/procesoPesado';
+import { procesoPesado } from '../../helpers/procesoPesado';
 
 import '../02-useEffect/effects.css'
 

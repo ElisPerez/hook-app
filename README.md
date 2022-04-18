@@ -22,3 +22,4 @@ React JS, Web
 7. Memo: React method.
    - useMemo(function, dependence): Memo Hook.
 8. useCallback.
+9. Final section: Practical exercise
