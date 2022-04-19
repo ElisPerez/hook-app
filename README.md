@@ -23,3 +23,14 @@ React JS, Web
    - useMemo(function, dependence): Memo Hook.
 8. useCallback(function, dependence).
 9. Final section: Practical exercise
+
+New Section:
+1. Reducer
+   - const funcReducer = (state = initialState, action) => {
+      if (action?.type === 'add')
+      return [
+         ...state,
+         action.payload,
+      ]
+      return state
+   }
