@@ -41,3 +41,4 @@ New Section:
    - Add new to-do.
       - dispatch(action).
    - Save to-do in LocalStorage.
+   - Delete to-do from localStorage.

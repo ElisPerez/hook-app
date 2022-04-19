@@ -25,7 +25,18 @@ export const TodoApp = () => {
   useEffect(() => {
     localStorage.setItem('toDos', JSON.stringify(toDos));
     
-  }, [toDos]);
+  }, [ toDos ]);
+  
+  const handleDelete = (todoId) => {
+    // create action
+    const action = {
+      type: 'delete',
+      payload: todoId,
+    }
+
+    // dispatch
+    dispatch(action);
+  }
 
  const handleSubmit = (e) => {
    e.preventDefault();
@@ -65,7 +76,12 @@ export const TodoApp = () => {
             <p className="text-center">
               { i + 1 }. { todo.desc }
           </p>
-          <button className="btn btn-danger">Delete</button>
+            <button
+              className="btn btn-danger"
+              onClick={() => handleDelete(todo.id)}
+            >
+              Delete
+            </button>
          </li>
         ))
       }
