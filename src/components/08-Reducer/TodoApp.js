@@ -1,26 +1,41 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { toDoReducer } from './toDoReducer';
 
 import './styles.css';
+import { useForm } from '../../hooks/useForm';
+ 
 
-const inicialState = [ {
- id: new Date().getTime(),
- desc: 'Aprender inglés',
- done: false,
-}]
+const init = () => {
+  return JSON.parse(localStorage.getItem('toDos')) || [];
+  // init lee lo que está en el localStorage y lo pasa al initialState.
+  // return [ {
+  //     id: new Date().getTime(),
+  //     desc: 'Aprender inglés',
+  //     done: false,
+  //    } ]
+}
 
 export const TodoApp = () => {
- const [ toDos, dispatch ] = useReducer(toDoReducer, inicialState);
+  const [ toDos, dispatch ] = useReducer(toDoReducer, [], init);
+  
+  const [ { description }, handleInputChange, reset ] = useForm({
+    description: '',
+  })
 
- console.log(toDos);
+  useEffect(() => {
+    localStorage.setItem('toDos', JSON.stringify(toDos));
+    
+  }, [toDos]);
 
  const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log('object');
+   e.preventDefault();
+   if (description.trim().length <= 1) {
+     return;
+   }
 
   const newTodo = {
    id: new Date().getTime(),
-   desc: 'Nueva tarea',
+   desc: description,
    done: false,
    };
    
@@ -30,6 +45,7 @@ export const TodoApp = () => {
    }
 
    dispatch(action);
+   reset();
  }
  
 
@@ -46,8 +62,8 @@ export const TodoApp = () => {
        {
         toDos.map((todo, i) => (
          <li key={ todo.id } className="dk-bgc list-group-item">
-          <p className="text-center">
-           {todo.desc}
+            <p className="text-center">
+              { i + 1 }. { todo.desc }
           </p>
           <button className="btn btn-danger">Delete</button>
          </li>
@@ -67,8 +83,10 @@ export const TodoApp = () => {
         autoComplete='off'
         className='form-control inp-elis'
         name="description"
+        onChange={handleInputChange}
         placeholder='Learn...'
         type="text"
+        value={description}
        />
        <button
         className="btn-elis btn btn-outline-primary"

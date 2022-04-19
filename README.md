@@ -40,3 +40,4 @@ New Section:
       - Styles CSS.
    - Add new to-do.
       - dispatch(action).
+   - Save to-do in LocalStorage.
