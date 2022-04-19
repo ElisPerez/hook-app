@@ -38,3 +38,5 @@ New Section:
 2. ToDo App - useReducer().
    - Creating the shell of the to-do list.
       - Styles CSS.
+   - Add new to-do.
+      - dispatch(action).

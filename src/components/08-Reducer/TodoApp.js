@@ -10,9 +10,27 @@ const inicialState = [ {
 }]
 
 export const TodoApp = () => {
- const [ toDos ] = useReducer(toDoReducer, inicialState);
+ const [ toDos, dispatch ] = useReducer(toDoReducer, inicialState);
 
  console.log(toDos);
+
+ const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log('object');
+
+  const newTodo = {
+   id: new Date().getTime(),
+   desc: 'Nueva tarea',
+   done: false,
+   };
+   
+   const action = {
+     type: 'add',
+     payload: newTodo,
+   }
+
+   dispatch(action);
+ }
  
 
   return (
@@ -24,7 +42,7 @@ export const TodoApp = () => {
      <div className="col-7">
       <h4 className='text-center'>To-Do List</h4>
       <hr />
-     <ul className='list-group list-group-flush'>
+     <ul className='d-grid gap-2 list-group list-group-flush'>
        {
         toDos.map((todo, i) => (
          <li key={ todo.id } className="dk-bgc list-group-item">
@@ -40,7 +58,11 @@ export const TodoApp = () => {
      <div className="col-5">
       <h4 className='text-center'>Add To-Do</h4>
       <hr />
-      <form class="d-grid gap-2">
+
+      <form
+       className="d-grid gap-2"
+       onSubmit={ handleSubmit }
+      >
        <input
         autoComplete='off'
         className='form-control inp-elis'
@@ -48,7 +70,12 @@ export const TodoApp = () => {
         placeholder='Learn...'
         type="text"
        />
-       <button className="btn-elis btn btn-outline-primary">Add</button>
+       <button
+        className="btn-elis btn btn-outline-primary"
+        type='submit'
+       >
+        Add
+       </button>
        
       </form>
      </div>
