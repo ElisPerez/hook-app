@@ -8,6 +8,7 @@ React JS, Web
 
 ### Hooks:
 
+#### Section #1: General Hooks.
 1. useState(inicialState).
 2. useEffect(function, dependence).
    - useEffect unmount - Cleanup.
@@ -24,7 +25,7 @@ React JS, Web
 8. useCallback(function, dependence).
 9. Final section: Practical exercise
 
-New Section:
+#### Section #2: useReducer.
 1. Reducer
    - const funcReducer = (state = initialState, action) => {
       if (action?.type === 'add')
@@ -45,3 +46,6 @@ New Section:
    - Optimization #1: To-do list.
    - Optimization #2: Add to-do.
    - End of section.
+
+#### Section #3: useContext.
+1. AppRouter

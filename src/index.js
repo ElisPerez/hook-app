@@ -14,13 +14,14 @@ import ReactDOM from 'react-dom/client';
 // import { CounterApp } from './components/01-useState/CounterApp';
 // import { HookApp } from './HookApp';
 // import { Padre } from './components/07-tarea-memo/Padre';
-import { TodoApp } from './components/08-Reducer/TodoApp';
+// import { TodoApp } from './components/08-Reducer/TodoApp';
+import { MainApp } from './components/09-useContext/MainApp';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <TodoApp />
+    <MainApp />
   </>
 );
 
