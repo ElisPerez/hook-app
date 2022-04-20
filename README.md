@@ -42,3 +42,4 @@ New Section:
       - dispatch(action).
    - Save to-do in LocalStorage.
    - Delete to-do from localStorage.
+   - Optimization #1: To-do list.
