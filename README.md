@@ -48,4 +48,5 @@ React JS, Web
    - End of section.
 
 #### Section #3: useContext.
-1. AppRouter
+1. Configure router in React.
+2. Link and NavLink (New update v6)
