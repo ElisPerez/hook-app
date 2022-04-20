@@ -43,3 +43,5 @@ New Section:
    - Save to-do in LocalStorage.
    - Delete to-do from localStorage.
    - Optimization #1: To-do list.
+   - Optimization #2: Add to-do.
+   - End of section.

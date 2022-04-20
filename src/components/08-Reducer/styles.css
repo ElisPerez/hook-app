@@ -53,7 +53,7 @@ p {
 }
 
 .dk-bgc {
- background-color: #41331c; 
+ background-color: #41331c;
  color: #e8eaed;
 }
 
@@ -61,4 +61,8 @@ p {
  align-items: center;
  display: flex;
  justify-content: space-between;
+}
+
+.btn-danger {
+ background-color: #dc3646;
 }
