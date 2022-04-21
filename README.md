@@ -52,3 +52,5 @@ React JS, Web
 2. Link and NavLink (New update v6)
 3. createContext and UserContext.
    - Learn Higher Order Component (Componente de orden superior que contiene otros componentes)
+   - useContext.
+      - Login and Logout.

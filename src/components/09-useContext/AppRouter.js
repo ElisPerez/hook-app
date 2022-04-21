@@ -13,13 +13,15 @@ import { NavBar } from './NavBar';
 export const AppRouter = () => {
   return (
     <Router>
-      <NavBar />
     <div>
-     <Routes>
-      <Route exact path={ '/' } element={ <HomeScreen />  }/>
-      <Route exact path={ '/about' } element={ <AboutScreen />  }/>
-      <Route exact path={ '/login' } element={ <LoginScreen />  }/>
-     </Routes>
+      <NavBar />
+      <div className="container">
+        <Routes>
+        <Route exact path={ '/' } element={ <HomeScreen />  }/>
+        <Route exact path={ '/about' } element={ <AboutScreen />  }/>
+        <Route exact path={ '/login' } element={ <LoginScreen />  }/>
+             </Routes>
+      </div>
     </div>
     </Router>
   )
