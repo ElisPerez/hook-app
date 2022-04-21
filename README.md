@@ -50,3 +50,5 @@ React JS, Web
 #### Section #3: useContext.
 1. Configure router in React.
 2. Link and NavLink (New update v6)
+3. createContext and UserContext.
+   - Learn Higher Order Component (Componente de orden superior que contiene otros componentes)
